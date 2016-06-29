@@ -18,11 +18,7 @@
 
         public static int ladderLength(string beginWord, string endWord, ISet<string> wordDict)
         {
-            LinkedList<WordNode> queue = new LinkedList<WordNode>();
-
             Stack<WordNode> stack = new Stack<WordNode>();
-
-            // queue.AddLast(new WordNode(beginWord,1));
 
             stack.Push(new WordNode(beginWord, 1));
 
@@ -43,8 +39,8 @@
                     char tmp = arr[i];
                     for (char c = 'a'; c < 'z'; c++)
                     {
-                        if (arr[i] != c)
-                            arr[i] = c;
+                        // if (arr[i] != c)
+                        arr[i] = c;
 
                         string newWord = new string(arr);
                         if (wordDict.Contains(newWord))
@@ -53,8 +49,9 @@
                             wordDict.Remove(newWord);
                         }
 
-                        arr[i] = tmp;
+                        // arr[i] = tmp;
                     }
+                    arr[i] = tmp;
                 }
 
 
