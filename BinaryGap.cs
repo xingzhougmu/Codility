@@ -1,6 +1,7 @@
 /*
         Task: https://codility.com/programmers/task/binary_gap/
                 BinaryGap: Find longest sequence of zeros in binary representation of an integer. 
+                changes
         */
         public int BinaryGap (int N)
         {
